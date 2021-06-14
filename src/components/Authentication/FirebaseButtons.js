@@ -15,7 +15,7 @@ const FirebaseButtons = (props)=> {
     <>
     <Button onClick={buttonClickHandler} className="w-100 signup_box mb-3"><Span img={envelopeImg}></Span>Signup with Email</Button>
     <Button onClick={signInWithGoogle} className="w-100 signup_box mb-3"><Span img={googleImg}></Span>Signup with Google</Button>
-    {/* <Button onClick={signInWithFacebook} className="w-100 signup_box mb-3 fb"><Span img={facebookImg}></Span>Signup with Faebook</Button> */}
+    <Button onClick={signInWithFacebook} className="w-100 signup_box mb-3 fb"><Span img={facebookImg}></Span>Signup with Faebook</Button>
           
     {/* <button onClick={buttonClickHandler}>Button 1</button>
     <Button onClick={signInWithGoogle}>Sign In With Google</Button>
