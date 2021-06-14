@@ -10,13 +10,13 @@ app.initializeApp(firebaseConfig)
 export const auth = app.auth();
 export const firestore = app.firestore();
 
-const google_provider = new app.auth.GoogleAuthProvider();
-google_provider.setCustomParameters({ prompt : 'select_account' });
-export const signInWithGoogle =()=> auth.signInWithPopup(google_provider);
+const provider = new app.auth.GoogleAuthProvider();
+provider.setCustomParameters({ prompt : 'select_account' });
+export const signInWithGoogle =()=> auth.signInWithPopup(provider);
 
-const facebook_provider = new app.auth.FacebookAuthProvider();
-facebook_provider.setCustomParameters({ prompt : 'select_account' });
-export const signInWithFacebook =()=> auth.signInWithPopup(facebook_provider);
+// const facebook_provider = new app.auth.FacebookAuthProvider();
+// facebook_provider.setCustomParameters({ prompt : 'select_account' });
+// export const signInWithFacebook =()=> auth.signInWithPopup(facebook_provider);
 
 class Firebase {
   constructor() {
