@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
   return (
     <div class="wrapper white">
       <SEO title={data.site.siteMetadata.title} description={data.site.siteMetadata.title} />
-      <span onClick={handleLogoutClick}>Logout</span>
+      {/* <span onClick={handleLogoutClick}>Logout</span> */}
       {children}
     </div>
   )

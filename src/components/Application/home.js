@@ -1,6 +1,5 @@
-import React, {useState} from 'react'
-import SlidingPanel from 'react-sliding-side-panel';
-import 'react-sliding-side-panel/lib/index.css';
+import React, { useState, useRef } from 'react';
+import SidePanel from './sidepanel'
 
 import mainbannerImg from '../../assets/images/mainbanner.png'
 import imgIcon1 from '../../assets/images/icon1.png'
@@ -17,31 +16,12 @@ import imgEmployment from '../../assets/images/employment.png'
 
 
 const Home = ()=>{
-    const [openPanel, setOpenPanel] = useState(false);
+
     return(
     <div className="container">
-         <div className="d-flex pt-3 px-2 py-3 align-items-baseline">
-            <div className="menu_bar">
-            <div>
-                <button onClick={() => setOpenPanel(true)}>Open</button>
-            </div>
-            <SlidingPanel
-                type={'left'}
-                isOpen={openPanel}
-                size={200}
-            >
-                <div>
-                <div>My Panel Content</div>
-                <button onClick={() => setOpenPanel(false)}>close</button>
-                </div>
-            </SlidingPanel>
-                 <button>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>                
-            </div>
-            <h1 className="text-center w-100">Take Me Abroad</h1>
+         <div className="d-flex align-items-center toppanel">
+            <SidePanel/>
+            <h1 className="text-center w-100 align-self-center">Take Me Abroad</h1>
         </div>
         <div className="d-flex align-items-center justify-content-center mb-4"> <img src={mainbannerImg} alt="Banner 1" className="w-100"/> </div>
         <h2 className="mb-4">Top Categories</h2>

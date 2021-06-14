@@ -11,6 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+#___gatsby{ width:100%; float: left; margin:0px; padding:0px;}
 h1, h2, h3, h4 {
 	font-weight: 600;
 }
@@ -84,12 +85,13 @@ a, a:hover {
 
 h1 {
 	font-weight: 700;
-	font-size: 5vw;
+	font-size: 30px;
+	line-height: 30px;
 	background: #FC6352;
 	background: -webkit-linear-gradient(to left, #FC6352 50%, #F84663 50%);
 	background: -moz-linear-gradient(to left, #FC6352 50%, #F84663 50%);
 	background: linear-gradient(to left, #FC6352 50%, #F84663 50%);
-  background-clip: text;
+    background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -107,18 +109,18 @@ h1 {
 	box-shadow: 0px 4px 10px -2px rgba(0, 0, 0, 0.02);
 }
 .menu_bar button{
-	width:40px;
+	width:30px;
 	border: 0px solid;
 	border-color:transparent;
-	height:40px;
+	height:30px;
 	position:relative;
 	border-radius: 0px;
 	background-color: transparent;
 }
 .menu_bar button span{
 	display:block;	
-	height:6px;
-	margin-bottom: 8px;
+	height:3px;
+	margin-bottom: 5px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -126,21 +128,21 @@ h1 {
 	
 	}
 .menu_bar button :nth-child(1){
-	width:40px;
+	width:30px;
 }
 .menu_bar button :nth-child(2){
-	width:28px;
+	width:22px;
 }
 .menu_bar button :nth-child(3){
-	width:40px;
+	width:30px;
 }
 .white .menu_bar button span{
 	background-color: #000000;
-	border:2px solid #000000;
+	border:3px solid #000000;
 }
 .black .menu_bar button span{
 	background-color: #EBEBEB;
-	border:2px solid #EBEBEB;
+	border:3px solid #EBEBEB;
 }
 .form-input{
 	border:1.3px solid #6c6c6c;
@@ -230,57 +232,72 @@ h1{font-size: 7vw;}
     font-size: 100%;
   }
 }
+.toppanel{ height:84px;}
+.sidepanel-toggle {
+	position: relative;
+	background: transparent;
+	border-color: transparent;
+	transition: all 0.3s linear;;
+	cursor: pointer;
+  }
+  .sidepanel-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 1.5rem;
+  }
+  .sidepanel {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding:0px;
+	margin:0px;
+	width: 300px;	
+	height: 100%;
+	overflow-x:hidden;
+	overflow-y:auto;
+	max-width: 90%;
+	background: #ffffff;
+	display: grid;
+	z-index: 9999;
+	grid-template-rows: auto 1fr auto;
+	row-gap: 1rem;
+	box-shadow: hsl(360, 67%, 44%);;
+	transition: all 0.3s linear;
+	transform: translate(-100%);
+  }
+  .overlay{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.35);
+	z-index: 2;
+	cursor: pointer;}
+	.overlay .wrapper.black, .overlay .wrapper, .wrapper.white  {
+	background-color:transparent !important;
+	}
+  .show-sidepanel {
+	transform: translate(0);
+  }
+  .border2{ border:2px solid red;}
+  .sidepanel h3{ font-weight: 500; font-size: 19px; line-height: 25px;}
+  .sidepanel h2 {font-weight: 600; font-size: 24px; line-height: 28px;}
+  .sidepanel .top_bg{background: linear-gradient(130.44deg, #F84663 2.32%, #FC6352 102.62%); position:relative; padding:20px 20px 10px 20px;}
+  .sidepanel .top_bg img{ -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; width:70px;}
+  .sidepanel .links ul{ width:100%; float:left; list-style:none; padding:0px; margin:0px;}
+  .sidepanel .links li{ font-size:17px; font-weight: 400; margin: 10px 0px !important; line-height:20px !important;}
+  .sidepanel .links li a,.sidepanel .links li span{font-weight: 400; font-size: 17px; line-height: 20px; color: #000; padding-left: 10px;}
+  .sidepanel .links li i{ color:#b5b3b3; font-size:18px;}
+  .close-btn{position:absolute; top:5px; right:5px; color:#ffffff; font-weight:900; width:18px; heigth:18px;}
+  .close-btn span{width:18px; display:block; background-repeat:no-repeat; background-position: center center; background-size: 100% 100%;}
 
-
-.bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 36px;
-}
-
-.bm-burger-bars {
-  background: #373a47;
-}
-
-.bm-burger-bars-hover {
-  background: #a90000;
-}
-
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
-}
-
-.bm-cross {
-  background: #bdc3c7;
-}
-
-.bm-menu-wrap {
-  position: fixed;
-  height: 100%;
-}
-
-.bm-menu {
-  background: #373a47;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-}
-
-.bm-morph-shape {
-  fill: #373a47;
-}
-
-.bm-item-list {
-  color: #b8b7ad;
-  padding: 0.8em;
-}
-
-.bm-item {
-  display: inline-block;
-}
-
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
+  @media screen and (min-width: 676px) {
+	.sidepanel {
+	  width: 400px;
+	}
+  }
+  

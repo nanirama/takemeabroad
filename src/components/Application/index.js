@@ -6,7 +6,7 @@ const Index = props => {
     return (
       <Layout>
         <Home/>
-    </Layout>
+      </Layout>
     )
   }
 
