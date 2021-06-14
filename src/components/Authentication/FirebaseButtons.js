@@ -4,7 +4,7 @@ import { Button } from 'reactstrap';
 import { signInWithGoogle, signInWithFacebook } from '../Firebase/firebase'
 import envelopeImg from '../../assets/images/envelope.png'
 import googleImg from '../../assets/images/google.png'
-//import facebookImg from '../../assets/images/facebook.png'
+import facebookImg from '../../assets/images/facebook.png'
 
 const FirebaseButtons = (props)=> {
     function buttonClickHandler(e) {
